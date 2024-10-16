@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+.ball1 {
+  width: 25px;
+  height: 25px;
+  background: lightgreen;
+  position: absolute;
+  animation: mymove 5s infinite;
+  border-radius: 50%;
+}
+
+.ball2 {
+  width: 25px;
+  height: 25px;
+  background: lightgreen;
+  position: absolute;
+  animation: memove 5s infinite;
+  border-radius: 50%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.tree-circle1{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width:100px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: rgb(34, 153, 84,0.6);
+    box-shadow: 0 0 20px rgba(34, 153, 84, 0.5);
+    animation: growCircle 3s ease-in-out infinite;
+}
+.tree-circle2{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width:100px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: rgb(34, 153, 84,0.6);
+    box-shadow: 0 0 20px rgba(34, 153, 84, 0.5);
+    animation: growCircle 3s ease-in-out infinite;
+}
+
+.tree{
+    position: relative;
+    height: 100px;
+    width: 100px;
+}
+@keyframes memove {
+    0% {
+        transform: translatex(0px) translatey(0px)
+    }
+    50% {
+        transform: translatex(50px) translatey(10px);
+    }
+    100% {
+        transform: translatex(0px) translatey(90px)
+    }
+}
+
+@keyframes mymove {
+    0% {
+        transform: translatex(0px) translatey(90px)
+    }
+    50% {
+        transform: translatex(100px) translatey(100px);
+    }
+    100% {
+        transform: translatex(0px) translatey(0px)
+    }
+}
+</style>
+</head>
+<body>
+    <div class="tree">
+        <div class="tree-circle1"></div>
+        <div class="tree-circle2"></div>
+        <div class="ball1"></div>
+        <div class="ball2"></div>
+    </div>
+
+</body>
+</html>
